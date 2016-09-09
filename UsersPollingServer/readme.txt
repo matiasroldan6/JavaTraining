@@ -1,0 +1,2 @@
+Exercise of users polling a server for web pages using synchronized methods.
+Three user threads send requests for random websites to a server, which keeps a count for how many of each site has been requested.
