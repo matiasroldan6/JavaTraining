@@ -1,0 +1,1 @@
+Exercise1: using two dimensional matrix represent a geometric form and validate if it’s a closed form or it’s an open form. For instance a box is a form completely closed, an incomplete box (without a line) it’s an incomplete form. Create an algorithm that can evaluate if the geometric form in the matrix is a closed or an open form.
