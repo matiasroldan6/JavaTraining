@@ -2,18 +2,11 @@ import java.util.ArrayList;
 
 public class MatricialShape {
 
-	int[][] matrix = new int[][]
-	{
-			{0,0,0,0,0,0,0,0,0},
-			{0,0,0,0,0,1,1,1,0},
-			{0,0,0,0,0,1,0,1,0},
-			{0,0,0,0,0,1,0,1,0},
-			{0,0,0,0,0,1,0,1,0},
-			{0,1,1,1,1,1,0,1,0},
-			{0,1,0,0,0,0,0,1,0},
-			{0,1,1,1,1,1,1,1,0},
-			{0,0,0,0,0,0,0,0,0}
-	};
+	int[][] matrix;
+	
+	public MatricialShape(int[][] matrix){
+		this.matrix = matrix;
+	}
 	
 	public boolean isClosedShape()
 	{	
@@ -25,7 +18,10 @@ public class MatricialShape {
 					/* For each node that's a 1, acquire all four surrounding non-diagonal nodes. 
 					 * If there's only one 1 around this node, the shape is not closed.
 					 */
-					ArrayList<Integer> array = returnSurroundingNodes(matrix, i, j);
+					ArrayList<Integer> array;
+
+					array = returnSurroundingNodes(matrix, i, j);
+					
 					for (Integer item:array){
 						nodesSum = nodesSum + item;
 					}
@@ -50,12 +46,5 @@ public class MatricialShape {
 		if (i<matrix.length) { array.add(matrix[i+1][j]); }
 		
 		return array;
-	}
-	
-	public boolean isPointContained(int x, int y){
-		
-		/** TODO **/
-		
-		return true;
 	}
 }
