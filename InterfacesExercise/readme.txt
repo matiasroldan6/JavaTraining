@@ -1,0 +1,1 @@
+Exercise5: Provide an example of a class model using classes interfaces and abstract classes.
