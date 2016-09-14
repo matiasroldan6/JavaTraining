@@ -1,0 +1,1 @@
+Exercise6: create two instances of a pojo class, use the equals to ensure that it’s does not work. The override the equal method and see how it works.
