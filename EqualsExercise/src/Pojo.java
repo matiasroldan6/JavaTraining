@@ -1,10 +1,10 @@
 
-public class Pojo {
+public class Pojo<T> {
 
-	private String name;
+	private T t;
 	
-	public void setName(String name){
-		this.name = name;
+	public void setParameter(T t){
+		this.t = t;
 	}
 	
 	public void foo(){
@@ -14,17 +14,17 @@ public class Pojo {
 	@Override
 	public boolean equals(Object o){
 		
-		if (o == null){
-			return false;
+		if (o == this){
+			return true;
 		}
 		
-		if (!(o instanceof Pojo)){
+		if ((o == null) || (o.getClass() != this.getClass())){
 			return false;
 		}
 		
 		Pojo p = (Pojo)o;
 		
-		return this.name.equals(p.name);
+		return this.t.equals(p.t);
 		
 	}
 }

@@ -3,11 +3,11 @@ public class MainClass {
 
 	public static void main(String[] args) {
 		
-		Pojo pojo1 = new Pojo();
-		Pojo pojo2 = new Pojo();
+		Pojo<String> pojo1 = new Pojo<>();
+		Pojo<String> pojo2 = new Pojo<>();
 		
-		pojo1.setName("thename");
-		pojo2.setName("thename");
+		pojo1.setParameter("thename");
+		pojo2.setParameter("thename");
 		
 		System.out.println(pojo1.equals(pojo2));
 
